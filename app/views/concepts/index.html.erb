@@ -1,29 +1,19 @@
-<h1>Listing concepts</h1>
+<div class="row">
+  <div class="col-md-3 sidebar" ></div>
+  <div class="col-md-9">
+      <div id="concepts-wrapper">
+        <h2>All Concepts</h2>
+        <% @concepts.each do |concept| %>
+          <div class="concept">
+            <%= link_to concept.title, concept_path(concept) %>
+            <p><%= concept.description %></p>
+            <%= link_to 'Edit', edit_concept_path(concept) %> |
+            <%= link_to 'Delete', concept_path(concept), method: :delete %>
+          </div>
+        <% end %>
+        <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @concepts.each do |concept| %>
-      <tr>
-        <td><%= concept.title %></td>
-        <td><%= concept.description %></td>
-        <td><%= concept.body %></td>
-        <td><%= link_to 'Show', concept %></td>
-        <td><%= link_to 'Edit', edit_concept_path(concept) %></td>
-        <td><%= link_to 'Destroy', concept, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Concept', new_concept_path %>

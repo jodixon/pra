@@ -1,19 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @concept.title %>
-</p>
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="concept-full col-md-9">
+		<h1><%= @concept.title %></h1>
+		<p><%= @concept.description %></p>
+		<p><%= @concept.body %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @concept.description %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @concept.body %>
-</p>
-
-<%= link_to 'Edit', edit_concept_path(@concept) %> |
-<%= link_to 'Back', concepts_path %>
+		<%= link_to 'Edit', edit_concept_path(@concept) %> |
+		<%= link_to 'Back', concepts_path %>
+	</div>
+</div>

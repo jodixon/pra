@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+body {
+	font-family: Helvetica, sans-serif;
+	font-size: 15px;
+}
+
+.container {
+	max-width: 960px;
+
+}
+
+.concept {
+	padding: 10px;
+	border-left: 3px solid white;
+}
+
+#concepts-wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.concept p {
+	font-style: italic;
+}
+
+.concept:hover {
+	border-left: 3px solid red;
+}
+
+
+.form-group .form-control {
+	width: 300px;
+	border-radius: 2px;
+}
+
+h1, h2 {
+	font-size: 1.5em;
+	padding-bottom: 10px;
+	border-bottom: 1px solid gray;
+}
+
+.glyphicon {
+	font-size: 1.7em;
+}
+
