@@ -4,7 +4,6 @@
 
 .concept {
 	padding: 10px;
-	border-left: 3px solid white;
 }
 
 .content {
@@ -17,5 +16,5 @@
 }
 
 .concept:hover {
-	border-left: 3px solid red;
+	background-color: #e7e7e7;
 }

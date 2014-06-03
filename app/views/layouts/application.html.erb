@@ -11,7 +11,7 @@
 <nav class="navbar navbar-default navbar-top">
 	<div class="navbar-inner">
 		<div class="container">
-      <a href="#" class="navbar-brand">App</a>
+      <%= link_to "App", concepts_path, class: 'navbar-brand' %>
 			<form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -36,6 +36,8 @@
 
 <div class="container">
 	<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
   <div id="footer">
   </div>
 </div>
