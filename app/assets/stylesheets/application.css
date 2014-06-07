@@ -24,8 +24,9 @@ body {
 
 .content {
 	margin: 0 0;
-	border-top: 2px solid black;
+	border-top: 1px solid rgb(119, 119, 119);
 	padding-top: 20px;
+	min-height: 350px;
 }
 
 .form-group .form-control {
@@ -39,12 +40,24 @@ h1, h2 {
 	display: inline-block;
 }
 
+h2#username {
+	margin-left: 10px;
+}
+
 .glyphicon {
 	font-size: 1.7em;
 }
 
 #footer {
-	border-top: 2px solid black;
+	border-top: 1px solid rgb(119, 119, 119);
 	min-height: 100px;
+}
+
+.fa {
+	font-size: 1.3em;
+}
+
+.profile-pic {
+	font-size: 5em;
 }
 

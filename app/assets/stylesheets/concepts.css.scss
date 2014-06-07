@@ -4,14 +4,35 @@
 
 .concept {
 	padding: 10px;
+	margin-top: 15px;
 }
 
 .concept p {
 	font-style: italic;
 }
 
-.concept:hover {
-	background-color: #e7e7e7;
+.concept:hover p {
+
+}
+
+.title {
+	margin-bottom: 15px;
+}
+
+.concept:hover .title {
+	color: red;
+}
+
+.concept:hover .panel-heading {
+	background-color: #e7e7e7
+}
+
+.concept .admin {
+	visibility: hidden;
+}
+
+.concept:hover .admin {
+	visibility: visible;
 }
 
 .new_concept {

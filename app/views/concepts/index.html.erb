@@ -1,8 +1,7 @@
 <div class="row">
   <div class="col-md-3 sidebar" >
     <div class="content">
-      <h2>Profile</h2>
-      <p><b>username</b></p>
+      <i class="fa fa-user profile-pic"></i><h2 id="username">username</h2>
       <p>This is the area where information about the user will go</p>
       <p>Here is some more information, stats, links, etc.</p>
     </div>
@@ -12,11 +11,15 @@
         <h2>All Concepts</h2>
         <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default new_concept' %>
         <% @concepts.each do |concept| %>
-          <div class="concept">
-            <%= link_to concept.title, concept_path(concept) %>
-            <p><%= concept.description %></p>
-            <%= link_to 'Edit', edit_concept_path(concept) %> |
-            <%= link_to 'Delete', concept_path(concept), method: :delete %>
+          <div class="concept panel">
+            <div class='panel-heading'>
+              <%= link_to concept.title, concept_path(concept), class: 'title' %>
+            </div>
+            <div class='panel-body'>
+              <p><%= concept.description %></p>
+              <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
+              <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+            </div>
           </div>
         <% end %>
       </div>
