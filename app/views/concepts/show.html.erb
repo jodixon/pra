@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-	<div class="col-md-3"></div>
-	<div class="concept-full col-md-9">
-		<h1><%= @concept.title %></h1>
-		<p><%= @concept.description %></p>
-		<p><%= @concept.body %></p>
-
-		<%= link_to 'Edit', edit_concept_path(@concept) %> |
-		<%= link_to 'Back', concepts_path %>
+<div class="row content-wrapper">
+	<div class="col-md-3"><div class='content'></div></div>
+	<div class="col-md-9">
+		<div class='content'>
+			
+			<%= markdown(@concept.body).html_safe %>
+				
+			<br>
+			<br>
+			<%= link_to 'Edit', edit_concept_path(@concept) %> |
+			<%= link_to 'Back', concepts_path %>
+		</div>
 	</div>
 </div>

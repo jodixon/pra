@@ -4,7 +4,7 @@
 
 .concept {
 	padding: 10px;
-	margin-top: 15px;
+	margin-top: 0px;
 }
 
 .concept p {
@@ -15,16 +15,20 @@
 
 }
 
-.title {
-	margin-bottom: 15px;
-}
-
 .concept:hover .title {
 	color: red;
 }
 
 .concept:hover .panel-heading {
-	background-color: #e7e7e7
+	background-color: #e7e7e7;
+}
+
+.panel-heading {
+	background-color: #e7e7e7;
+}
+
+.panel {
+	margin: 0;
 }
 
 .concept .admin {
