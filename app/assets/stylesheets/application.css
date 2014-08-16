@@ -24,19 +24,56 @@ body {
 }
 
 .content {
-	border-top: 2px solid rgb(119, 119, 119);
-	padding-top: 20px;
+	padding-top: 50px;
 	min-height: 350px;
 }
 
-.content .form-group {
+.navbar-default {
+	background-color: white;
+	border-color: white;
+}
+
+.navbar-default .navbar-brand {
+	color: #333;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: white;
+	background-color: #333;
+}
+
+
+label.control-label {
+	color: #333;
 	margin-top: 15px;
 }
 
-.form-group .form-control {
-	width: 300px;
-	border-radius: 2px;
+input.form-control {
+	border-color: #333;
 }
+
+.searchbar {
+	min-width: 300px;
+}
+
+.editor {
+	min-height: 300px;
+	border-color: #333;
+	font-family: consolas;
+}
+
+.well {
+	border-color: #333;
+}
+
+.content {
+}
+
+.btn-default {
+	border-color: #333;
+	font-color: #333;
+}
+
 
 h1 {
 	font-size: 1.5em;
@@ -50,8 +87,9 @@ h2 {
 /*	border-bottom: 1px solid black;
 */}
 
-h2#username {
-	margin-left: 10px;
+
+h2#section-title {
+	display: inline-block;
 }
 
 .glyphicon {
@@ -59,8 +97,8 @@ h2#username {
 }
 
 footer {
-	border-top: 2px solid rgb(119, 119, 119);
 	min-height: 100px;
+	margin-top: 100px;
 }
 
 footer p {
@@ -71,10 +109,6 @@ footer p {
 	font-size: 1.3em;
 }
 
-.profile-pic {
-	font-size: 5em;
-}
-
 ul li {
 	list-style-type: none;
 	margin-bottom: 15px;
@@ -83,4 +117,5 @@ ul li {
 em {
 	font-weight: bold;
 }
+
 

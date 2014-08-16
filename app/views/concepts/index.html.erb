@@ -1,29 +1,22 @@
 <div class="row">
   <div class="col-md-3 sidebar" >
     <div class="content">
-      <i class="fa fa-user profile-pic"></i><h2 id="username">username</h2>
-      <p>This is the area where information about the user will go</p>
-      <p>Here is some more information, stats, links, etc.</p>
+      <h2 id="section-title">All Concepts</h2><br>
+        <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default new_concept' %>
     </div>
   </div>
   <div class="col-md-9">
-      <div class="content">
-        <h2>All Concepts</h2>
-        <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default new_concept' %>
+      <div class="content concept-container">
         <% @concepts.each do |concept| %>
-          <div class="concept panel">
-            <div class='panel-heading'>
-              <%= link_to concept.title, concept_path(concept), class: 'title' %>
-            </div>
-            <div class='panel-body'>
-              <p><%= concept.description %></p>
-              <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
-              <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
-            </div>
-          </div>
+              <div class="concept col-sm-12">
+                <%= link_to concept.title, concept_path(concept), class: 'title' %>
+                <p><%= concept.description %></p>
+                <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
+                <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+              </div>
         <% end %>
       </div>
     </div>
-</div>
+</div> <!-- end row -->
 
 
