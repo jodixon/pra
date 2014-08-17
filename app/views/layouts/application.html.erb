@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-top">
 	<div class="navbar-inner">
 		<div class="container">
       <%= link_to "App", concepts_path, class: 'navbar-brand' %>
@@ -37,17 +37,24 @@
             </ul>
           </li>
         <% else %>
-              <%= link_to "Sign in", new_user_session_path, class: 'btn btn-default navbar-btn' %>
+              <%= link_to "Sign in", login_path, class: 'btn btn-default navbar-btn' %>
+              <%= link_to "Sign up", register_path, class: 'btn btn-default navbar-btn' %>
         <% end %>
       </ul>
 		</div>
 	</div>
-</nav>
+</nav> <!-- end navigation -->
 
 <div class="container">
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+	<% flash.each do |type, message| %>
+  <div class="alert <%= bootstrap_class_for type %> fade in">
+    <button class="close" data-dismiss="alert">×</button>
+    <%= message %>
+  </div>
+<% end %>
+
   <%= yield %>
+
   <footer>
     <p>Copyright 2014.</p>
   </footer>
