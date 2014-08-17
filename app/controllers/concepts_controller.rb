@@ -1,5 +1,6 @@
 class ConceptsController < ApplicationController
   before_action :set_concept, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new]
 
   # GET /concepts
   # GET /concepts.json

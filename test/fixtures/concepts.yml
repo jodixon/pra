@@ -4,6 +4,7 @@ one:
   title: MyString
   description: MyText
   body: MyText
+  user: john
 
 two:
   title: MyString
