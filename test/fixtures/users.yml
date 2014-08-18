@@ -5,4 +5,11 @@ john:
   encrypted_password: "dsfgs866gsagd6sgas68e00035nbt244"
   profile_name: 'johndixon'
 
+jon:
+  first_name: "Jon"
+  last_name: "Dickson"
+  email: 'jdickson@gmail.com'
+  encrypted_password: 'khfyfoutfd76r874976ghfuvpfgspiyfgu7eyf'
+  profile_name: 'jondickson'
+
 

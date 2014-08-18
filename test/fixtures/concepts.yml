@@ -10,3 +10,9 @@ two:
   title: MyString
   description: MyText
   body: MyText
+
+three:
+  title: 'Hello'
+  description: 'Hello'
+  body: 'Hello'
+  user: jon

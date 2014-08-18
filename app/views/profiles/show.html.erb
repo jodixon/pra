@@ -1,2 +1,20 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div class="row">
+  <div class="col-md-3 sidebar" >
+    <div class="content">
+      <h2 id="section-title">My Concepts</h2><br>
+        <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default new_concept' %>
+    </div>
+  </div>
+  <div class="col-md-9">
+      <div class="content concept-container">
+        <% @user.concepts.each do |concept| %>
+              <div class="concept col-sm-12">
+                <%= link_to concept.title, concept_path(concept), class: 'title' %>
+                <p><%= concept.description %></p>
+                <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
+                <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+              </div>
+        <% end %>
+      </div>
+    </div>
+</div> <!-- end row -->
