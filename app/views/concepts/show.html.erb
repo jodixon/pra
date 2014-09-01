@@ -1,14 +1,18 @@
-<div class="row content-wrapper">
-	<div class="col-md-3"><div class='content'></div></div>
-	<div class="col-md-9">
-		<div class='content'>
-			
+<div class='content'>
+	<div class='row'>
+		<div class='concept-header col-md-12'>
+			<i class="fa fa-file"></i>
+			<%= link_to(current_user.profile_name, profiles_show_path, class: 'header-profile')  + ' / ' + @concept.title %>
+			<span class='pull-right'>
+				<%= link_to 'Edit', edit_concept_path(@concept) %> |
+				<%= link_to 'Back', concepts_path %>
+			</span>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class='concept-show col-md-12'>	
 			<%= markdown(@concept.body).html_safe %>
-				
-			<br>
-			<br>
-			<%= link_to 'Edit', edit_concept_path(@concept) %> |
-			<%= link_to 'Back', concepts_path %>
 		</div>
 	</div>
 </div>

@@ -8,7 +8,7 @@
   <div class="col-md-9">
       <div class="content concept-container">
         <% @concepts.each do |concept| %>
-              <div class="concept col-sm-12">
+              <div class="concept-index col-sm-12">
                 <%= link_to concept.title, concept_path(concept), class: 'title' %>
                 <p><%= concept.description %></p>
                 <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>

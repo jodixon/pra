@@ -2,43 +2,86 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.concept {
+
+// Concepts#index --------------------------------------------------------- |
+
+.concept-index {
 	padding: 10px;
-	margin-top: 0px;
+	margin-top: 15px;
+	border-bottom: 1px solid #eee;
 }
 
-.concept p {
+.concept-index p {
 	font-style: italic;
 }
 
-.concept:hover p {
+.concept-index:hover p {
 
 }
 
-.concept:hover .title {
+.concept-index:hover .title {
 	color: red;
 }
 
-.concept:hover .panel-heading {
-	background-color: #e7e7e7;
-}
-
-.panel-heading {
-	background-color: #e7e7e7;
-}
-
-.panel {
-	margin: 0;
-}
-
-.concept .admin {
+.concept-index .admin {
 	visibility: hidden;
 }
 
-.concept:hover .admin {
+.concept-index:hover .admin {
 	visibility: visible;
 }
 
 .concept-container {
 	margin-top: 20px;
 }
+
+
+// Concepts#show --------------------------------------------------------- |
+
+.fa-file {
+	margin-right: 0.5em;
+}
+
+.header-profile {
+	color: blue;
+	font-style: bold;
+}
+
+.concept-header {
+	font-size: 1em;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	padding: 1.2em 4em;
+	margin-bottom: 1em;
+}
+
+.concept-show {
+	border: 1px solid #eee;
+	border-radius: 4px;
+	padding: 4em;
+	padding-top: 2em;
+}
+
+.concept-show h1 {
+	display: block;
+	font-size: 2em;
+	line-height: 1.2;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #eee;
+}
+ .concept-show p {
+ 	font-size: 1em;
+ 	line-height: 1.6;
+ }
+
+
+
+
+
+
+
+
+
+
+
+

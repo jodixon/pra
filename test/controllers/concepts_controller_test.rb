@@ -38,6 +38,16 @@ class ConceptsControllerTest < ActionController::TestCase
     assert_redirected_to concept_path(assigns(:concept))
   end
 
+  test "should create concept for the current user when logged in" do
+    sign_in users(:john)
+    assert_difference('Concept.count') do
+      post :create, concept: { body: @concept.body, description: @concept.description, title: @concept.title, user_id: users(:jon).id }
+    end
+
+    assert_redirected_to concept_path(assigns(:concept))
+    assert_equal assigns(:concept).user_id, users(:john).id
+  end
+
   test "should show concept" do
     get :show, id: @concept
     assert_response :success
@@ -65,6 +75,13 @@ class ConceptsControllerTest < ActionController::TestCase
     sign_in users(:john)
     patch :update, id: @concept, concept: { body: @concept.body, description: @concept.description, title: @concept.title }
     assert_redirected_to concept_path(assigns(:concept))
+  end
+
+  test "should get update concept for current user when logged in" do
+    sign_in users(:john)  
+    patch :update, id: @concept, concept: { body: @concept.body, description: @concept.description, title: @concept.title, user_id: users(:jon).id }
+    assert_redirected_to concept_path(assigns(:concept))
+    assert_equal assigns(:concept).user_id, users(:john).id
   end
 
   test "should destroy concept" do

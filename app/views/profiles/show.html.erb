@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-3 sidebar" >
     <div class="content">
-      <h2 id="section-title">My Concepts</h2><br>
+      <h2 id="section-title"><%= @user.profile_name %></h2><br>
         <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default new_concept' %>
     </div>
   </div>
