@@ -1,18 +1,40 @@
 <div class="row">
   <div class="col-md-3 sidebar" >
-    <div class="content">
-      <h2 id="section-title"><%= @user.profile_name %></h2><br>
-        <%= link_to 'New Concept', new_concept_path, class: 'btn btn-default new_concept' %>
+    <div class="content profile">
+        <div class='row user-data'>
+          <img src="/square.svg" class='img-circle profile-pic'>
+          <div class='user-info'>
+            <%= current_user.name %> <br>
+            <%= link_to(current_user.profile_name, profiles_show_path, class: 'profile-name') %>
+          </div>
+        </div>
+        <div class='row user-stats'>
+          <p>12 Followers</p>
+          <p>25 Following</p>
+          <p>17 Concepts</p>
+        </div>
     </div>
   </div>
   <div class="col-md-9">
-      <div class="content concept-container">
+      <div class="content">
         <% @user.concepts.each do |concept| %>
-              <div class="concept col-sm-12">
-                <%= link_to concept.title, concept_path(concept), class: 'title' %>
-                <p><%= concept.description %></p>
-                <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
-                <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+              <div class="concept-index col-sm-12">
+                <div class='row header'>
+                  <img src="/square.svg" class="img-circle profile-thumb">
+                  <%= link_to(current_user.profile_name, profiles_show_path, class: 'username') %>
+                  <span class='timestamp pull-right'>Aug 29</span>
+                </div>
+                <div class='row body'>
+                  <i class="fa fa-file icon"></i>
+                  <div class='text'>
+                    <%= link_to(concept.title, concept_path(concept), class: 'title') %>
+                    <p>
+                      <%= concept.description %>
+                    </p>
+                    <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
+                    <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+                  </div>
+                </div>
               </div>
         <% end %>
       </div>
