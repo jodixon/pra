@@ -8,7 +8,6 @@
 .concept-index {
 	padding: 10px;
 	margin-top: 15px;
-	border-bottom: 1px solid #eee;
 }
 
 .concept-index p {
@@ -35,31 +34,63 @@
 	margin-top: 20px;
 }
 
-.profile-pic {
-	margin-right: 0.5em;
-}
+
 
 .concept-index .fa-file {
 	font-size: 2em;
 }
 
-.body {
-	margin-top: 2em;
-	margin-left: 1em;	
+.concept-index .header {
+	padding: 10px;
+	border: 1px solid #eee;
+	border-radius: 4px 4px 0px 0px;
 }
 
-.icon {
+.concept-index:hover .header {
+	border: 1px solid #959396;
 }
 
-.text {
-	margin-left: 2.5em;
-	margin-top: -2em;
+	.profile-pic {
+		margin-right: 0.5em;
+	}
+
+	.username {
+		color: #333;
+	}
+
+	.timestamp {
+		font-size: 14px;
+		color: #959396
+	}
+
+.concept-index .body {
+	border: 1px solid #eee;
+	border-top: none;
+	border-radius: 0px 0px 4px 4px;
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-bottom: 1em;	
 }
+
+.concept-index:hover .body {
+	border: 1px solid #959396;
+	border-top: none;
+}
+
+	.icon {
+	}
+
+	.text {
+		margin-left: 2.5em;
+		margin-top: -2em;
+		color: #959396;
+	}
 
 // Concepts#show --------------------------------------------------------- |
 
 .fa-file {
 	margin-right: 0.5em;
+	color: #959396;
 	width: auto;
 }
 
