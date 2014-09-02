@@ -53,12 +53,13 @@ input.form-control {
 }
 
 .searchbar {
-	min-width: 300px;
+	min-width: 400px;
 }
 
 .editor {
-	min-height: 300px;
+	min-height: 500px;
 	border-color: #333;
+	padding: 5em;
 	font-family: consolas;
 }
 
