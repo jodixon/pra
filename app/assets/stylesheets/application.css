@@ -25,7 +25,6 @@ body {
 
 .content {
 	padding-top: 75px;
-	min-height: 350px;
 }
 
 .navbar-default {
@@ -61,13 +60,6 @@ input.form-control {
 	border-color: #333;
 	padding: 5em;
 	font-family: consolas;
-}
-
-.well {
-	border-color: #333;
-}
-
-.content {
 }
 
 .btn-default {

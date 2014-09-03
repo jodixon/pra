@@ -4,14 +4,13 @@
         <div class='row user-data'>
           <img src="/square.svg" class='img-circle profile-pic'>
           <div class='user-info'>
-            <%= current_user.name %> <br>
-            <%= link_to(current_user.profile_name, profiles_show_path, class: 'profile-name') %>
+            <%= @user.name %> <br>
+            <%= link_to(@user.profile_name, @user_path, class: 'profile-name') %>
           </div>
         </div>
         <div class='row user-stats'>
-          <p>12 Followers</p>
-          <p>25 Following</p>
-          <p>17 Concepts</p>
+          <%= @user.followers.length + ' Followers' %> <br>
+          <%= @user.followeds.length = ' Following' %>
         </div>
     </div>
   </div>
@@ -21,7 +20,7 @@
               <div class="concept-index col-sm-12">
                 <div class='row header'>
                   <img src="/square.svg" class="img-circle profile-thumb">
-                  <%= link_to(current_user.profile_name, profiles_show_path, class: 'username') %>
+                  <%= link_to(concept.user.profile_name, concept.user.profile_name , class: 'username') %>
                   <span class='timestamp pull-right'>Aug 29</span>
                 </div>
                 <div class='row body'>

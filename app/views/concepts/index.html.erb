@@ -8,24 +8,26 @@
   <div class="col-md-9">
       <div class="content concept-container">
         <% @concepts.each do |concept| %>
-              <div class="concept-index col-sm-12">
-                <div class='row header'>
-                  <img src="/square.svg" class="img-circle profile-pic"  style="width: 2em; height: 2em;">
-                  <%= link_to(current_user.profile_name, profiles_show_path, class: 'username') %>
-                  <span class='timestamp pull-right'>Aug 29</span>
-                </div>
-                <div class='row body'>
-                  <i class="fa fa-file icon"></i>
-                  <div class='text'>
-                    <%= link_to(concept.title, concept_path(concept), class: 'title') %>
-                    <p>
-                      <%= concept.description %>
-                    </p>
-                    <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
-                    <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+
+                  <div class="concept-index col-sm-12">
+                    <div class='row header'>
+                      <img src="/square.svg" class="img-circle profile-pic"  style="width: 2em; height: 2em;">
+                      <%= link_to(concept.user.profile_name, concept.user.profile_name) %>
+                      <span class='timestamp pull-right'>Aug 29</span>
+                    </div>
+                    <div class='row body'>
+                      <i class="fa fa-file icon"></i>
+                      <div class='text'>
+                        <%= link_to(concept.title, concept_path(concept), class: 'title') %>
+                        <p>
+                          <%= concept.description %>
+                        </p>
+                        <%= link_to 'Edit', edit_concept_path(concept), class: 'admin' %><span class='admin'> | </span>
+                        <%= link_to 'Delete', concept_path(concept), method: :delete, class: 'admin' %>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
+            
         <% end %>
       </div>
     </div>
