@@ -5,7 +5,7 @@ class ConceptsController < ApplicationController
   # GET /concepts
   # GET /concepts.json
   def index
-    @concepts = Concept.all
+    @concepts = Concept.order(created_at: :desc)
   end
 
   # GET /concepts/1

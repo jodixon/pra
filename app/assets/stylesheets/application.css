@@ -33,7 +33,8 @@ body {
 }
 
 .navbar-default .navbar-brand {
-	color: #333;
+	color: white;
+	background: #333;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -55,11 +56,12 @@ input.form-control {
 	min-width: 400px;
 }
 
-.editor {
-	min-height: 500px;
-	border-color: #333;
-	padding: 5em;
-	font-family: consolas;
+.editor{
+	margin: 3em 0;
+}
+
+textarea#concept_body.md-input {
+	padding: 1em;
 }
 
 .btn-default {
@@ -112,5 +114,6 @@ ul li {
 em {
 	font-weight: bold;
 }
+
 
 

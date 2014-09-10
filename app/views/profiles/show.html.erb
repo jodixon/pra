@@ -9,8 +9,22 @@
           </div>
         </div>
         <div class='row user-stats'>
-          <%= @user.followers.length + ' Followers' %> <br>
-          <%= @user.followeds.length = ' Following' %>
+          <%= @user.followers.length.to_s + ' Followers' %> <br>
+          <%= @user.followeds.length.to_s + ' Following' %> <br>
+          <%= @user.concepts.length.to_s  + ' Posts' %>
+
+          <% if current_user && @user != current_user %>
+            <% if current_user.following? @user %>
+              <%= form_for @relationship, method: :delete do |f| %>
+                <%= f.submit "Unfollow" %>
+              <% end %>
+            <% else %>
+              <%= form_for @relationship  do |f| %>
+                <%= f.hidden_field :followed_id, value: @user.id %>
+                <%= f.submit "Follow" %>
+              <% end %>
+            <% end %>
+          <% end %>
         </div>
     </div>
   </div>

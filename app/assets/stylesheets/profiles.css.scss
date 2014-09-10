@@ -10,7 +10,7 @@
 }
 
 .user-data {
-	border: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 	border-radius: 4px;
 	padding: 10px;
 }
@@ -23,7 +23,6 @@
 
 	.profile-name {
 		display: inline;
-		margin-top: 20px;
 	}
 
 	.profile-thumb {
@@ -32,5 +31,7 @@
 	}
 
 .user-stats {
-	margin-top: 20px;
+	margin-top: 1em;
+	color: #666;
+
 }

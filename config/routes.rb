@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :relationships
+
   get 'profiles/show'
 
   devise_for :users
