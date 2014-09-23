@@ -4,9 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use mysql as the database for Active Record
-group :production do
-    gem 'mysql2'
-end
+# group :production do
+#     gem 'mysql2'
+# end
+gem 'sqlite3'
 # Use Devise for user authentication
 gem 'devise'
 # Use SCSS for stylesheets
